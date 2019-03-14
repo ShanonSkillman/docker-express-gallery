@@ -22,14 +22,15 @@ app.get('/api/smoke', (req, res) => {
 });
 
 app.get('/api/users', (req, res) => {
-  return new User().fetchAll()
-    .then((users) => {
-      return res.json(users);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.sendStatus(500);
-    });
+  res.json({ fuck: 'fuck' })
+  // return new User().fetchAll()
+  //   .then((users) => {
+  //     return res.json(users);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //     res.sendStatus(500);
+  //   });
 });
 
 app.post('/api/users', (req, res) => {
